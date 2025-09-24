@@ -1,5 +1,16 @@
-import PlayDtmf from './NativePlayDtmf';
+import { NativeModules } from 'react-native';
 
-export function multiply(a: number, b: number): number {
-  return PlayDtmf.multiply(a, b);
+const { PlayDtmf } = NativeModules;
+
+export function playTone(digit: string) {
+  PlayDtmf.playTone(digit);
 }
+
+export function stopTone() {
+  PlayDtmf.stopTone();
+}
+
+export default {
+  playTone,
+  stopTone,
+};
