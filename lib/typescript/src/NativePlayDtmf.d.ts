@@ -1,6 +1,7 @@
-import { type TurboModule } from 'react-native';
+import type { TurboModule } from 'react-native';
 export interface Spec extends TurboModule {
-    multiply(a: number, b: number): number;
+    playTone(digit: string): void;
+    stopTone(): void;
 }
 declare const _default: Spec;
 export default _default;

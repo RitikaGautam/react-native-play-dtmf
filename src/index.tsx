@@ -1,16 +1,9 @@
-import { NativeModules } from 'react-native';
+import NativePlayDtmf from './NativePlayDtmf';
 
-const { PlayDtmf } = NativeModules;
-
-export function playTone(digit: string) {
-  PlayDtmf.playTone(digit);
+export function playTone(digit: string): void {
+  NativePlayDtmf.playTone(digit);
 }
 
-export function stopTone() {
-  PlayDtmf.stopTone();
+export function stopTone(): void {
+  NativePlayDtmf.stopTone();
 }
-
-export default {
-  playTone,
-  stopTone,
-};
